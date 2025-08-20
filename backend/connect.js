@@ -10,6 +10,17 @@ const client = new MongoClient(process.env.ATLAS_URI, {
   }
 });
 
+let database
+
+module.exports = {
+  connectToServer: () => {
+    database = client.db("mealmetric")
+  },
+  getDb: () => {
+    return database
+  }
+}
+
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
