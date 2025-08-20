@@ -8,6 +8,7 @@ let recipeRoutes = express.Router()
 recipeRoutes.route("/recipes").get(async (request, response) => {
     let db = database.getDb()
     let data = await db.collection("recipe").find({}).toArray()
+
     if (data.length > 0) {
         response.json(data)
     } else {
@@ -19,6 +20,7 @@ recipeRoutes.route("/recipes").get(async (request, response) => {
 recipeRoutes.route("/recipes/:id").get(async (request, response) => {
     let db = database.getDb()
     let data = await db.collection("recipe").findOne({_id: new ObjectId(request.params.id)})
+    
     if (Object.keys(data).length > 0) {
         response.json(data)
     } else {
@@ -27,7 +29,7 @@ recipeRoutes.route("/recipes/:id").get(async (request, response) => {
 })
 
 // Adds recipe in db
-recipeRoutes.route("/recipe").post(async (request, response) => {
+recipeRoutes.route("/recipes").post(async (request, response) => {
     let db = database.getDb()
     let mongoObject = {
         title: request.body.title,
@@ -41,7 +43,7 @@ recipeRoutes.route("/recipe").post(async (request, response) => {
 })
 
 // Updates recipes in db
-recipeRoutes.route("/recipes/id").put(async (request, response) => {
+recipeRoutes.route("/recipes/:id").put(async (request, response) => {
     let db = database.getDb()
     let mongoObject = {
         $set: {
