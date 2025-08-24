@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.navbar {
+  position: fixed;
+  width: 25%;
+  left: 25%;
+  display: flex;
+  justify-content: space-between
+}
+
+.navbarItem {
+  padding: 8px;
+  margin: 4px;
+  color: white;
+  border-style: dashed;
+  border-width: 1px;
+  border-radius: 2px;
+} */
