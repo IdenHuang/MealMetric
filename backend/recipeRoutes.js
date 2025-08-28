@@ -36,7 +36,8 @@ recipeRoutes.route("/recipes").post(async (request, response) => {
         calories: request.body.calories,
         protein: request.body.protein,
         fat: request.body.fat,
-        carbs: request.body.carbs
+        carbs: request.body.carbs,
+        instructions: request.body.instructions
     }
     let data = await db.collection("recipe").insertOne(mongoObject)
     response.json(data)
@@ -51,7 +52,8 @@ recipeRoutes.route("/recipes/:id").put(async (request, response) => {
             calories: request.body.calories,
             protein: request.body.protein,
             fat: request.body.fat,
-            carbs: request.body.carbs
+            carbs: request.body.carbs,
+            instructions: request.body.instructions
         }
     }
     let data = await db.collection("recipe").updateOne({_id: new ObjectId(request.params.id)}, mongoObject)
