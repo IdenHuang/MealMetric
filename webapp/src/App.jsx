@@ -1,10 +1,10 @@
 import './App.css'
 import { HashRouter as Router, Routes, Route } from "react-router-dom"
-import { Calendar } from '../pages/Calendar'
-import { Home } from '../pages/Home'
-import { Recipes } from '../pages/Recipes'
-import { Navbar } from '../components/Navbar'
-import { Layout } from '../components/Layout'
+import { Calendar } from './pages/Calendar'
+import { Home } from './pages/home'
+import { Recipes } from './pages/recipes'
+import { Navbar } from './components/Navbar'
+import { Layout } from './components/Layout'
 
 function App() {
   return (

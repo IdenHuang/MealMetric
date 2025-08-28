@@ -3,17 +3,17 @@ import { Link } from "react-router-dom"
 export function Navbar() {
     return (
         <div classname = "navbar">
-            <Link to="/" classname="navbarItem">
+            <Link to="/" className="navbarItem">
                 <button>
                     Home
                 </button>
             </Link>
-            <Link to="/calendar" classname="navbarItem">
+            <Link to="/calendar" className="navbarItem">
                 <button>
                     Calendar
                 </button>
             </Link>
-            <Link to="/recipes" classname="navbarItem">
+            <Link to="/recipes" className="navbarItem">
                 <button>
                     Recipes
                 </button>
