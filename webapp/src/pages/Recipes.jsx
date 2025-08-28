@@ -16,19 +16,19 @@ export function Recipes() {
         loadRecipes()
     }, [])
 
-
+    
     return (
         <>
             {recipes.map((recipe) => {
                 return (
-                    <div>
+                    <>
                         <h2>Name: {recipe.title}</h2>
                         <p>Calories: {recipe.calories}</p>
                         <p>Protein: {recipe.protein}</p>
                         <p>Fats: {recipe.fat}</p>
                         <p>Carbohydrates: {recipe.carbs}</p>
                         <p>Instructions: {recipe.instructions}</p>
-                    </div>
+                    </>
                 )
             })}
         </>

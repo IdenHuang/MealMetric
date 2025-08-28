@@ -28,6 +28,22 @@ trackerRoutes.route("/calender/:id").get(async (request, reponse) => {
     }
 })
 
+// Adds input into calender
+trackerRoutes.route("/calender").post(async (request, reponse) => {
+    let db = database.getDb()
+    let mongoObject = {
+            date: request.body.date,
+            calories: request.body.calories,
+            protein: request.body.protein,
+            fat: request.body.fat,
+            carbs: request.body.carbs
+    }
+
+    let data = await db.collection("calender").insertOne(mongoObject)
+    response.json(data)
+})
+
+
 // Update macro in db
 trackerRoutes.route("/calender/:id").put(async (request, response) => {
     let db = database.getDb()

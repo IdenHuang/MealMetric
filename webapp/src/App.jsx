@@ -1,6 +1,6 @@
 import './App.css'
 import { HashRouter as Router, Routes, Route } from "react-router-dom"
-import { Calendar } from './pages/Calendar'
+import { Calendar } from './pages/calendar'
 import { Home } from './pages/home'
 import { Recipes } from './pages/recipes'
 import { Navbar } from './components/Navbar'

@@ -73,6 +73,7 @@ export async function getInput(id) {
 // Create calender input
 export async function createInput(input) {
     const response = await axios.post(`${URL}/calender`, input)
+    console.log(response.data)
     return response.data
 }
 
