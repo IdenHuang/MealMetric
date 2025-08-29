@@ -25,7 +25,7 @@ export function Calendar() {
 
         let newObject  = {
             date: new Date(),
-            calories: calories,
+            calories: calories.parseInt(),
             protein: protein,
             fat: fats,
             carbs: carbs
@@ -45,7 +45,7 @@ export function Calendar() {
                 <input onChange={(e) => setProtein(e.target.value)} required name="inputProtein" type="number"></input>
                 <label>Fats: </label>
                 <input onChange={(e) => setFats(e.target.value)} required name="inputFats" type="number"></input>
-                <label>Carbohydates: </label>
+                <label>Carbohyrdates: </label>
                 <input onChange={(e) => setCarbs(e.target.value)} required name="inputCarbs" type="number"></input>
                 <button type="submit">Log into Tracker</button>
             </form>
